@@ -1,4 +1,5 @@
 import tkinter as tk
+import webbrowser
 
 #Task:
 
@@ -16,6 +17,23 @@ Can you bind a different function to the buttons
 
 #FUNCTIONS
 
+def learnMoreEPL(*args):
+
+	#Code block of a function
+	print("learnMore")
+	webbrowser.open("https://www.premierleague.com/matchweek/5672/blog")
+
+
+def learnMoreSeriaA(*args):
+
+	#Code block of a function
+	print("learnMore")
+	webbrowser.open("http://www.legaseriea.it/en/")
+
+def search(*args):
+	print("search")
+	x = searchBar.get()
+	print(x)
 #GUI
 #Assignment Statment
 root = tk.Tk() #Creates the window 
@@ -31,8 +49,9 @@ searchBar = tk.Entry(root,width = 30)
 display1 = tk.Label(root,text = "IMAGE 1")
 display2 = tk.Label(root,text = "IMAGE 2")
 
-btn1 = tk.Button(root,text = "LEARN MORE - EPL")
-btn2 = tk.Button(root,text = "LEARN MORE - Seria")
+btn1 = tk.Button(root,text = "LEARN MORE - EPL",command = learnMoreEPL)
+btn2 = tk.Button(root,text = "LEARN MORE - SeriaA")
+btn2.bind("<Button-1>",learnMoreSeriaA)
 
 display = tk.Text(root,width = 30, height = 10)
 
@@ -55,6 +74,7 @@ btn1.grid(row = 2, column = 0)
 btn2.grid(row = 2, column = 1)
 
 display.grid(row = 3, column = 0, columnspan = 2)
+#create a label.
 
 
 
@@ -64,6 +84,6 @@ We set everything up and we tell the program to wait for something to
 happen.
 Sometimes you hear people call a "game loop"  
 '''
-
+root.bind("<Return>",search)
 root.mainloop() #launches your window and sits here waiting
 print("End Program")
