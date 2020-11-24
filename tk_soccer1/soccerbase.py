@@ -44,6 +44,8 @@ root = tk.Tk() #Creates the window
 With python and other languages we have parameters based on order
 and named parameters (order doesn't matter)
 '''
+
+labelSearchBar = tk.Label(root, text = "Enter Soccer player")
 searchBar = tk.Entry(root,width = 30)
 
 display1 = tk.Label(root,text = "IMAGE 1")
@@ -67,13 +69,14 @@ There are multiple ways to place objects on a tkinter layout
  - place
 '''
 
-searchBar.grid(row = 0, column = 0, columnspan = 2)
-display1.grid(row = 1, column = 0)
-display2.grid(row = 1, column = 1)
-btn1.grid(row = 2, column = 0)
-btn2.grid(row = 2, column = 1)
+labelSearchBar.grid(row = 0, column = 0, columnspan = 2)
+searchBar.grid(row = 1, column = 0, columnspan = 2)
+display1.grid(row = 2, column = 0)
+display2.grid(row = 2, column = 1)
+btn1.grid(row = 3, column = 0)
+btn2.grid(row = 3, column = 1)
 
-display.grid(row = 3, column = 0, columnspan = 2)
+
 #create a label.
 
 
