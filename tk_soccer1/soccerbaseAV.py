@@ -27,7 +27,7 @@ def currentteamspositions(*args):
 root = tk.Tk()
 
 
-labelSearchBar = tk.Label(root, text = "More information on teams", font = "bold")
+labelSearchBar = tk.Label(root, text = "More information on teams")
 searchBar = tk.Entry(root,width = 30)
 
 display1 = tk.Label(root,text = "EPL.jpg")
